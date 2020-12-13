@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hesap Makinecik</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app" class="calculator card">
+      <input
+        type="text"
+        class="calculator-screen z-depth-1"
+        v-bind:value="number"
+        disabled
+      />
+
+      <div class="calculator-keys">
+        <button
+          @click="addition"
+          type="button"
+          class="operator btn btn-info"
+          value="+"
+        >
+          +
+        </button>
+        <button
+          @click="substraction"
+          type="button"
+          class="operator btn btn-info"
+          value="-"
+        >
+          -
+        </button>
+        <button
+          @click="multiplication"
+          type="button"
+          class="operator btn btn-info"
+          value="*"
+        >
+          &times;
+        </button>
+        <button
+          @click="divition"
+          type="button"
+          class="operator btn btn-info"
+          value="/"
+        >
+          &divide;
+        </button>
+
+        <button
+          @click="append('7')"
+          type="button"
+          value="7"
+          class="btn btn-light waves-effect"
+        >
+          7
+        </button>
+        <button
+          @click="append('8')"
+          type="button"
+          value="8"
+          class="btn btn-light waves-effect"
+        >
+          8
+        </button>
+        <button
+          @click="append('9')"
+          type="button"
+          value="9"
+          class="btn btn-light waves-effect"
+        >
+          9
+        </button>
+
+        <button
+          @click="append('4')"
+          type="button"
+          value="4"
+          class="btn btn-light waves-effect"
+        >
+          4
+        </button>
+        <button
+          @click="append('5')"
+          type="button"
+          value="5"
+          class="btn btn-light waves-effect"
+        >
+          5
+        </button>
+        <button
+          @click="append('6')"
+          type="button"
+          value="6"
+          class="btn btn-light waves-effect"
+        >
+          6
+        </button>
+
+        <button
+          @click="append('1')"
+          type="button"
+          value="1"
+          class="btn btn-light waves-effect"
+        >
+          1
+        </button>
+        <button
+          @click="append('2')"
+          type="button"
+          value="2"
+          class="btn btn-light waves-effect"
+        >
+          2
+        </button>
+        <button
+          @click="append('3')"
+          type="button"
+          value="3"
+          class="btn btn-light waves-effect"
+        >
+          3
+        </button>
+
+        <button
+          @click="append('0')"
+          type="button"
+          value="0"
+          class="btn btn-light waves-effect"
+        >
+          0
+        </button>
+        <button
+          @click="dot"
+          type="button"
+          class="decimal function btn btn-secondary"
+          value="."
+        >
+          .
+        </button>
+        <button
+          @click="clearAll()"
+          type="button"
+          class="all-clear function btn btn-danger btn-sm"
+          value="all-clear"
+        >
+          AC
+        </button>
+
+        <button
+          @click="equal"
+          type="button"
+          class="equal-sign operator btn btn-default"
+          value="="
+        >
+          =
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="calculator.js"></script>
+  </body>
+</html>
